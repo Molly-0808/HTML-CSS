@@ -1,0 +1,257 @@
+section {
+  margin: 100px;
+}
+/* ---------------------------- */
+/* .ball {
+  width: 300px;
+  height: 300px;
+  background-color: #ffef88;
+  transition-property: background-color, border-radius, margin-left;
+  transition-duration: 1s, 2s, 3s;
+  transition-delay: 0s, 1s, 3s;
+}
+
+.ball:hover {
+  background-color: #ad71b8;
+  border-radius: 100%;
+  margin-left: 100%;
+} */
+
+/* ———————上面是單純往右，下面是來回—————— */
+
+.ball {
+  width: 300px;
+  height: 300px;
+  background-color: #ffef88;
+  /* transition-property: margin-left, border-radius, background-color;
+  transition-duration: 3s, 2s, 1s;
+  transition-delay: 0s, 3s, 5s; */
+
+  /* transition-timing-function: ease-in-out; */
+
+  transition: all 3s;
+  /* 搭配下面的opacity: 0px; */
+}
+
+.ball:hover {
+  background-color: #ad71b8;
+  border-radius: 100%;
+  margin-left: 100%;
+
+  opacity: 0px;
+
+  /* transition-property: background-color, border-radius, margin-left;
+  transition-duration: 1s, 2s, 3s;
+  transition-delay: 0s, 1s, 3s; */
+}
+
+/* ———————下面是我寫的—————— */
+/* .parent {
+  position: relative;
+  width: 100%;
+} */
+
+/* .ball {
+  width: 300px;
+  height: 300px;
+  background-color: #ffef88;
+  transition-property: background-color, border-radius, transform;
+  transition-duration: 1s, 2s, 3s;
+  transition-delay: 0s, 1s, 3s;
+}
+
+.ball:hover {
+  background-color: #ad71b8;
+  border-radius: 100%;
+  transform: translateX(100vw); */
+
+/* ———————上面是單純往右，下面是來回—————— */
+/* .parent {
+  position: relative;
+  width: 100%;
+} */
+
+/* .ball {
+  width: 300px;
+  height: 300px;
+  background-color: #ffef88;
+  transition-property: transform, border-radius, background-color;
+  transition-duration: 3s, 2s, 1s;
+  transition-delay: 0s, 3s, 5s;
+}
+
+.ball:hover {
+  background-color: #ad71b8;
+  border-radius: 100%;
+  transform: translateX(100vw);
+  transition-property: background-color, border-radius, transform;
+  transition-duration: 1s, 2s, 3s;
+  transition-delay: 0s, 1s, 3s;
+} */
+/* ---------------------------- */
+.ts-box {
+  width: 300px;
+  height: 300px;
+  background-color: #f798b0;
+  /* transition-property: border-radius, background-color; */
+  /* transition-duration: 3s, 1s; */
+
+  transition-property: all;
+  transition-duration: 3s;
+  transition-delay: 1s;
+  /* transition-timing-function: linear; */
+  /* linear：全程等速運動 */
+  transition-timing-function: cubic-bezier(0.07, 0.71, 1, 0.3);
+  /* cubic-bezier(0.07, 0.71, 1, 0.3);是去網站複製的 */
+}
+
+.ts-box:hover {
+  background-color: #f84b4b;
+  border-radius: 100%;
+  transform: translateX(200px);
+}
+/* ---------------------------- */
+.grid-align {
+  background-color: rgb(185, 185, 185);
+  height: 600px;
+  /* gap: 20px; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: 100px; */
+
+  /* 整個空間垂直水平置中或置左右： */
+  /* align-content: center; */
+  justify-content: center;
+  /* 格子裡面垂直水平置中置左右： */
+  /* align-items: center; */
+  /* justify-items: center; */
+}
+
+.box {
+  /* width: 100px; */
+  /* height: 100px; */
+  background-color: #ffbee5;
+}
+
+.box9 {
+  background-color: #f25757;
+  /* justify-self: end; */
+
+  /* 線 */
+  /* 從1 到 最後一欄-1 */
+  /* grid-column: 1 / -1; */
+  /* grid-row: 3 / 5; */
+
+  /*線 + 面 */
+  /* grid-column: 1 / span 6; */
+  /* span 2 跨兩格 */
+
+  /* 點 */
+  /* grid-area: 2 / 3 / 4 / 5; */
+  /* 下面這行等同上面這行 */
+
+  /* 點 + 面 */
+  /* grid-area: 2 / 3 / span 2 / span 2; */
+}
+/* ---------------------------- */
+.fake-body {
+  background-color: #a0a0a0;
+  height: 600px;
+  display: grid;
+  /* grid-template-columns: 10% auto 10%;
+  grid-template-rows: 10% auto auto 10%;
+  grid-template-areas:
+    "t t t"
+    "s m a"
+    "s m ."
+    "s f f"; */
+  grid-template:
+    "t t t" 10%
+    "s m a" auto
+    "s m ." auto
+    "s f f" 10%/ 10% auto 10%;
+}
+
+/* 每一行的最後面：對應的是該列的高度（Row Height）。 */
+/* 斜線 / 之後：定義的是各欄的寬度（Column Widths）。 */
+
+header {
+  background-color: #ffc6bc;
+  grid-area: t;
+}
+
+aside {
+  background-color: #fbf7be;
+  grid-area: s;
+}
+
+main {
+  background-color: #bff5bd;
+  grid-area: m;
+}
+
+right-ad {
+  background-color: #4379ac;
+  grid-area: a;
+}
+
+footer {
+  background-color: #9756ad;
+  grid-area: f;
+}
+/* ---------------------------- */
+.grid-area {
+  background-color: #a3eaf4;
+  height: 600px;
+  display: grid;
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "posts posts posts ad"
+    "posts posts posts .";
+  /* 寫一個點「.」讓那格空著不放東西，前提是區塊必須為完整四邊形。 */
+}
+
+/* grid-area的名字是自定義的可以自己改別的 */
+
+.navbar {
+  background-color: #f8c1f2;
+  grid-area: navbar;
+}
+
+.ad {
+  background-color: #ccecc7;
+  grid-area: ad;
+}
+
+.posts {
+  background-color: #f8f19b;
+  grid-area: posts;
+}
+/* ---------------------------- */
+.grid-section {
+  height: 600px;
+  background-color: #d87878;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: 50px 50px; */
+  gap: 20px;
+}
+
+.card-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-btn {
+  background-color: #be3bc7;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 20px;
+  align-self: end;
+}

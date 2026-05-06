@@ -1,0 +1,72 @@
+header {
+  background-color: #f4caca;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1160px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.header-nav img {
+  width: 100px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.header-ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-ul li {
+  padding: 8px;
+}
+
+section {
+  margin: 100px;
+  width: 100%;
+}
+
+/* box-shadow: x軸偏移(右正左負) y軸偏移(v
+下正上負) blur(模糊半徑) spread(擴展半徑)
+color; */
+
+.card {
+  background-color: #c1edf5;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 10px 10px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+}
+/* 圖片上面兩角沒有圓角效果時可以直接在圖上加效果 但更推薦直接在父層加overflow: hidden; */
+/* .card img {
+  border-radius: 10px 0 0 0;
+} */
+
+.card-content {
+  padding: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #cccccb;
+  overflow-x: scroll;
+}
+
+.demo-ul {
+  list-style-image: url("../dog-img/hair.gif");
+  list-style-position: inside; /* 讓圖片標籤進入容器內 */
+}
+
+ol {
+  list-style-type: cjk-decimal; /* 數字改成國字的數字*/
+}

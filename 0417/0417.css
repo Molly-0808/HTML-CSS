@@ -1,0 +1,119 @@
+.box {
+  width: 300px; /*這300px是content而已不包含padding*/
+  height: 300px;
+  background-color: #ffc55a;
+  padding: 10px 20px 30px 40px; /* 上 右 下 左 */
+  border: 4px solid rgb(0, 0, 0);
+  margin: 100px;
+}
+
+.all_card {
+  background-color: #ffc494;
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.f_item {
+  background-color: #ffadad;
+  width: 300px;
+  height: 300px;
+}
+
+.f_item > div {
+  /* 會選到f_item下包的第一個 兒子 */
+  color: red; /* 給color的那層內包的都會被套用color font-size也是 */
+  font-size: 28px;
+  background-color: hsl(59, 82%, 72%);
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.s_item > div {
+  background-color: #b2b9df;
+  width: 100px;
+  height: 100px;
+}
+
+h1 + p {
+  color: red;
+}
+
+ul {
+  background-color: #cee7c8;
+  line-height: 2;
+  width: 600px;
+}
+
+li + li {
+  color: red;
+  border-top: 1px solid gray;
+}
+
+.p1,
+.p2 {
+  color: red;
+}
+
+.one_card {
+  background-color: #f4d5e3;
+  width: 186px; /*(1000/4)-padding20-border4-margin40=186*/
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  margin: 20px;
+  float: left; /*讓4張卡片並排 要在section class="all_card"裡搭配overflow: hidden*/
+}
+
+.one_card_ver3 {
+  box-sizing: border-box;
+  background-color: #9c7381;
+  width: 210px; /*包含content的186+padding的20+border的4*/
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  margin: 20px;
+  float: left; /*讓4張卡片並排 要在section class="all_card"裡搭配overflow: hidden*/
+}
+
+.picture {
+  width: 100%;
+  aspect-ratio: 4 / 3; /*使圖片固定比例*/
+  object-fit: cover; /*使圖片固定不變形*/
+}
+
+.title {
+  font-size: 30px;
+}
+
+.all_card_ver2 {
+  background-color: #604184;
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.one_card_1 {
+  background-color: #fff6df;
+  width: 201px; /*(1000/4)-padding20-border4-margin40=186*/
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px;
+  margin: 20px 10px 20px 20px;
+  float: left; /*讓4張卡片並排 要在section class="all_card"裡搭配overflow: hidden*/
+}
+
+.one_card_2and3 {
+  background-color: #fff6df;
+  width: 201px; /*(1000/4)-padding20-border4-margin40=186*/
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px;
+  margin: 20px 10px;
+  float: left; /*讓4張卡片並排 要在section class="all_card"裡搭配overflow: hidden*/
+}
+
+.one_card_4 {
+  background-color: #fff6df;
+  width: 201px; /*(1000/4)-padding20-border4-margin40=186*/
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px;
+  margin: 20px 20px 20px 10px;
+  float: left; /*讓4張卡片並排 要在section class="all_card"裡搭配overflow: hidden*/
+}

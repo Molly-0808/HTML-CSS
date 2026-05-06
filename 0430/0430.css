@@ -1,0 +1,80 @@
+.cust {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  position: relative;
+}
+
+.cust::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: -16px;
+  width: 48px;
+  height: 4px;
+  background-color: #b41111;
+}
+
+.pseudo::before {
+  content: "這是before";
+  color: green;
+  font-size: 28px;
+}
+
+.pseudo {
+  margin: 100px;
+}
+
+.pseudo::after {
+  content: "這是after";
+  color: red;
+  font-size: 28px;
+}
+
+/* 預設顏色首選方式 */
+:root {
+  --default-blue: #c5ddf3;
+}
+
+.box {
+  /* 預設顏色不常用 */
+  --default-pink: #edc3db;
+  margin: 100px;
+  width: 200px;
+  height: 200px;
+  font-size: 28px;
+  /* 透過var()呼叫預設顏色 */
+  background-color: var(--default-blue);
+}
+.box:hover {
+  cursor: pointer;
+  transform: skew(10deg, 20deg) scale(1.2);
+}
+
+.line {
+  margin: 100px;
+  width: 200px;
+  border-top: 100px solid red;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid blue;
+  border-left: 100px solid orange;
+}
+
+.right-triangle {
+  margin: 100px;
+  width: 300px;
+  height: 400px;
+  background-color: #0f8400;
+  /* 左上是 0 0，右下是 100% 100% */
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+}
+
+.right-triangle-2 {
+  margin: 100px;
+  width: 300px;
+  border-top: 200px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 200px solid #9a9a9a;
+  border-left: 150px solid #9a9a9a;
+}

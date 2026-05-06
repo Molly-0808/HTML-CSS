@@ -1,0 +1,30 @@
+.card {
+  margin: 100px;
+  width: 300px;
+  background-color: #d2b3f9;
+  position: relative;
+}
+
+.img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.content {
+  padding: 20px;
+}
+
+.sale {
+  background-color: #b0ff5b;
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.num {
+  background-color: #f03e3e;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

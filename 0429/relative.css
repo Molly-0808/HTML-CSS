@@ -1,0 +1,34 @@
+/* relative相對定位 偏移依據:自己位置 有占空間 */
+/* fixed 偏移依據：螢幕偏移 沒有占空間 */
+/* sticky 偏移依據：自己/螢幕 暫時佔據空間滑走就消失*/
+/* absolute 偏移依據：最近的父層有定位的 沒有占空間*/
+
+section {
+  margin: 100px;
+  width: 100%;
+}
+
+.logo-bar {
+  background-color: #3b271e;
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.logo-bar li {
+  width: 100px;
+  height: 100px;
+  background-color: #ede394;
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.logo-bar .item13 {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 120px;
+  left: 120px;
+}

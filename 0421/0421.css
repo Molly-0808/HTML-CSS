@@ -1,0 +1,68 @@
+section {
+  margin: 100px;
+}
+/* .box:first-child {
+  color: red;
+} */
+
+/* .box p:first-child {
+  color: green;
+} */
+
+/* .box:first-child p {
+  color: orange;
+} */
+
+/* .box:first-of-type {
+  color: aqua;
+} */
+
+/* .box :first-of-type {
+  color: blueviolet;
+} */
+
+/* .box p:first-of-type {
+  color: rgb(255, 162, 0);
+} */
+
+li {
+  width: 50%;
+  border-bottom: 1px solid black;
+  padding: 4px;
+  font-family: "Mogra", sans-serif;
+}
+
+li:last-of-type {
+  border-bottom: none;
+}
+
+li:nth-child(-n + 3) {
+  /*odd奇數、even偶數、n全部、填入數字可指定第幾行、3n三的倍數、3n+1、3n-1、n+3從第三個開始也就是第三個(含)以後、-n+3就是第三個(含)以前 */
+  background-color: #e9d9ff;
+}
+
+.box :not(div) {
+  background-color: rgb(174, 233, 255);
+}
+
+.link {
+  padding: 10px;
+  background-color: #ffbadb;
+  border-radius: 4px;
+}
+
+.link:visited {
+  background-color: #ff7272;
+}
+
+.link:focus {
+  background-color: #ff6a00;
+}
+
+.link:hover {
+  background-color: rgb(255, 255, 122);
+}
+
+.link:active {
+  background-color: #00a60b;
+}

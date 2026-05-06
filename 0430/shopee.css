@@ -1,0 +1,93 @@
+.product-section {
+  max-width: 1200px;
+  background-color: #000000;
+  margin: 0 auto;
+}
+
+.product-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgb(199, 176, 203);
+  width: calc((100% - 80px) / 5);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.card::before {
+  content: "商城";
+  background-color: #ff0;
+  position: absolute;
+  top: 34px;
+  left: 20px;
+  padding: 2px 10px;
+  z-index: 2;
+}
+
+.card::after {
+  content: "◥";
+  position: absolute;
+  top: 62px;
+  /* right: 100%; */
+  left: 20px;
+  font-size: 4px;
+  color: #ff0;
+}
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img::before {
+  content: "HOT";
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  padding: 2px 24px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -22px;
+  top: 4px;
+}
+
+.card:hover .card-img::after {
+  content: "限時特價";
+  background-color: #ffa;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 2px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-btn {
+  background-color: #be3bc7;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 20px;
+  align-self: end;
+}

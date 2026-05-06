@@ -1,0 +1,9 @@
+/* 測試html是否連上css可以寫這行然後開網頁看背景顏色有沒有改 */
+body {
+  background-color: rgb(255, 249, 186) !important;
+}
+
+p {
+  color: purple;
+  font-size: 28px;
+}

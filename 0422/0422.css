@@ -1,0 +1,193 @@
+h1 {
+  background-color: rgba(255, 240, 50, 0.7);
+  text-align: center;
+  line-height: 68px;
+  /* line-height會自動垂直置中而且整串字的高度都可以點擊不會侷限只能點字本身的範圍 */
+}
+
+section {
+  margin: 100px;
+}
+
+a {
+  /* text-decoration: underline; */
+  text-decoration: wavy red underline;
+}
+
+p {
+  line-height: 36px;
+  /* text-indent: 2rem; */
+}
+
+.box {
+  width: 300px;
+  background-color: #f0cccc;
+  text-align: justify;
+}
+
+.spacing {
+  background-color: #b8f6fd;
+  font-size: 28px;
+  text-align: center;
+  /* word-spacing: 40px;中文字可能對word-spacing無效 */
+  letter-spacing: 40px;
+}
+
+.post {
+  width: 600px;
+  margin: 0 auto 20px;
+  background-color: #c9fff4;
+  padding: 20px;
+  text-align: justify;
+}
+
+.post img:first-of-type {
+  width: 200px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.post img:nth-of-type(2) {
+  width: 200px;
+  float: right;
+  margin: 20px 0 20px 20px;
+}
+todo:css有很多氣球的卡片在這裡 .card1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 20px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.card:nth-child(2) {
+  clear: both;
+}
+
+.card:nth-child(odd) {
+  background-color: #fee376;
+}
+
+.card:nth-child(even) {
+  background-color: #ffceb0;
+}
+
+.card:nth-child(odd) img {
+  width: 400px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.card:nth-child(even) img {
+  width: 400px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  float: right;
+  margin: 0 0 0 20px;
+}
+
+.card p:first-of-type {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.bgcimg {
+  width: 800px;
+  height: 500px;
+  background-color: #7f86ed;
+  background-image: url("image/miffy_family.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.demo {
+  width: 400px;
+  height: 400px;
+  background: url("image/miffy_eat.png") no-repeat center / 90% 90% #8c00ff;
+}
+
+.linear {
+  width: 300px;
+  height: 250px;
+  background-image: linear-gradient(to right top, rgb(78, 235, 69), yellow);
+  border: 5px dotted red;
+  border-left: 5px dashed rgb(255, 49, 252);
+}
+
+.btn {
+  width: 200px;
+  height: 200px;
+  margin: 150px;
+  font-size: 36px;
+  background-color: #b2fff6;
+  padding: 10px 10px;
+  border-radius: 100%;
+}
+
+.btn2 {
+  width: 200px;
+  height: 100px;
+  margin: 150px;
+  font-size: 26px;
+  background-color: #f9d9f6;
+  padding: 10px 10px;
+  border-radius: 20% / 50%;
+  outline: 5px solid red;
+  outline-offset: 30px;
+}
+
+.whole-box {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.m-box {
+  /* aspect-ratio: 1 / 1; */
+  width: 280px;
+  height: 180px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.img180 {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  float: left;
+}
+
+.small-box {
+  width: 80px;
+  height: 180px;
+  float: right;
+}
+
+.img80-1,
+.img80-2 {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.img80-1 {
+  margin: 0 0 20px;
+}
+
+.m-box:nth-of-type(2) .small-box {
+  float: left;
+}
+
+.m-box:nth-of-type(2) .img180 {
+  float: right;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第87頁上課練習</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid rgb(0, 13, 255);
+        padding: 4px;
+      }
+      .sky {
+        background-color: rgb(206, 253, 237);
+      }
+      .pig {
+        background-color: #f5d7ff;
+      }
+      .fly {
+        background-color: #d7f3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        我是表格的標題
+      </caption>
+      <colgroup>
+        <col span="2" class="sky" />
+        <col span="4" class="pig" />
+        <col span="1" class="fly" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>性別</th>
+          <th>上份工作</th>
+          <th>生日</th>
+          <th>興趣</th>
+          <th>年齡</th>
+          <th>測試</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>王小明</td>
+          <td>男</td>
+          <td>行銷</td>
+          <td>2000/09/30</td>
+          <td>吃</td>
+          <td>24</td>
+          <td rowspan="2">測試合併第二行row</td>
+        </tr>
+        <tr>
+          <td>李小美</td>
+          <td>女</td>
+          <td>學生</td>
+          <td>2002/11/21</td>
+          <td>睡</td>
+          <td>22</td>
+          <!-- <td>測試合併第三行row</td> -->
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5">平均年齡</th>
+          <th>19</th>
+          <th>測試</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

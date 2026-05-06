@@ -1,0 +1,219 @@
+.header-nav {
+  width: 100%;
+  height: 68px;
+  background-color: #9ea8db;
+  text-align: center;
+  font-size: 0;
+}
+
+.header-a {
+  background-color: #bcf8ff;
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 68px;
+  font-size: 16px;
+}
+
+.demo-section {
+  margin: 100px;
+}
+
+.demo-displayinline {
+  width: 600px;
+  background-color: #f6b5cd;
+  display: inline;
+}
+
+.demo-displayblock {
+  width: 600px;
+  background-color: #dec3f1;
+  display: block;
+}
+
+.btn {
+  width: 100px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #59a6d6;
+  display: inline-block;
+}
+
+.allcard {
+  margin: 100px;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 20px; */
+  /* row-gap: 10px; */
+  gap: 10px 20px;
+  /* 46行加47行等於48行 */
+}
+
+.card {
+  width: 600px;
+  /* float: left; */
+  display: inline-block;
+}
+
+.card1 {
+  background-color: #faa4a4;
+}
+
+.card2 {
+  background-color: #f3c76e;
+  order: -1;
+  /* 第二張卡片預設位置是0 如果要換到第一個位置 就是要寫負一 */
+}
+
+.card3 {
+  background-color: #a6e05e;
+}
+
+.allbox {
+  width: 1000px;
+  margin: 100px;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  font-size: 20px;
+  height: 100px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.box1 {
+  width: 1000px;
+  background-color: #ff5c5c;
+}
+
+.box2 {
+  width: 490px;
+  background-color: #fdec6c;
+}
+
+.box3 {
+  width: 320px;
+  background-color: #84ef99;
+}
+
+.box4 {
+  width: 235px;
+  background-color: #81a6fd;
+}
+/* --------------------- */
+.allbox-ver2 {
+  width: 1000px;
+  margin: 100px;
+  background-color: #8a8a8a;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-flex {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.box-ver2 {
+  font-size: 20px;
+  height: 100px;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.box1-ver2 {
+  background-color: #efbf96;
+}
+
+.box2-ver2 {
+  background-color: #fef5ab;
+}
+
+.box3-ver2 {
+  background-color: #b2fcc1;
+}
+
+.box4-ver2 {
+  background-color: #bbd0ff;
+}
+/* ---------grow延展---------- */
+.grow-wrap {
+  margin: 100px;
+  display: flex;
+  background-color: #bebebe;
+}
+.grow {
+  height: 100px;
+}
+.grow-1 {
+  flex-grow: 2;
+  background-color: #fff9a0;
+}
+
+.grow-2 {
+  flex-grow: 1;
+  background-color: #fdcf5b;
+}
+
+.grow-3 {
+  flex-grow: 1;
+  background-color: #f9b352;
+}
+/* ---------shrink收縮--------- */
+.shrink-wrap {
+  margin: 100px;
+  display: flex;
+  background-color: #bebebe;
+}
+.shrink {
+  width: 800px;
+  height: 100px;
+}
+
+.shrink-1 {
+  flex-shrink: 0;
+  background-color: #9eedff;
+}
+
+.shrink-2 {
+  /* 不用寫因為預設flex-shrink: 1; */
+  background-color: #75a6f5;
+}
+
+.shrink-3 {
+  /* 不用寫因為預設flex-shrink: 1; */
+  background-color: #5b46ff;
+}
+/* ------basis單個物件的主軸長度----- */
+.basis-wrap {
+  margin: 100px;
+  display: flex;
+  background-color: #bebebe;
+}
+.basis {
+  height: 100px;
+  flex-basis: 33.33%;
+  /* flex-basis: 0; */
+  /* flex-grow: 1; */
+}
+.basis-1 {
+  background-color: #fbbfd6;
+}
+
+.basis-2 {
+  background-color: #f295ed;
+}
+
+.basis-3 {
+  background-color: #f457ff;
+}
+/* --------------------- */

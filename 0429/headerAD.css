@@ -1,0 +1,46 @@
+/* relative相對定位 偏移依據:自己位置偏移 有占空間 */
+/* fixed 螢幕偏移 沒有占空間 */
+header {
+  background-color: #9671c4;
+  width: 100%;
+  min-height: 68px;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+}
+
+section {
+  width: 100%;
+  margin-top: 68px;
+}
+
+.mask {
+  /* width: 100vw;
+  height: 100vw; */
+  background-color: rgb(106, 106, 106);
+  position: fixed;
+  /* top: 0; */
+  inset: 0;
+  opacity: 0.7;
+  z-index: 1000;
+}
+
+.ad {
+  width: 300px;
+  height: 400px;
+  background-color: #f6d0e6;
+  z-index: 2000;
+  position: fixed;
+  /* 方法一(實務上不常用) */
+  /* inset: 0;
+  margin: auto; */
+  /* 方法二(實務上不常用) */
+  /* top: calc(50% - 200px);
+  left: calc(50% - 150px); */
+  /* 方法三 (最好用的) */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  /* translate的-50%是指廣告(元素本身)的50%，而上面的top: 50%;和left: 50%;的50%是移動整張廣告到版面的某個位置，兩者概念不同 */
+}

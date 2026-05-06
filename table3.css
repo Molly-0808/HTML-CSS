@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+#title {
+  text-align: center;
+}
+.font-64font-red {
+  font-size: 64px;
+  color: rgb(15, 77, 46);
+}
+.faq {
+  background-color: rgb(246, 248, 213);
+  width: 600px;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 4px;
+}
+.dog {
+  background-color: rgb(203, 238, 251);
+}
+.cat {
+  background-color: rgb(255, 227, 249);
+}

@@ -1,0 +1,20 @@
+.card {
+  background-color: #c08686;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.picture {
+  width: 100%;
+  aspect-ratio: 4 / 3; /*無論寬度如何縮放，高度都會自動調整以維持這個長方形比例*/
+  object-fit: cover; /* 填滿整個容器，不准留白也不准壓縮變形 */
+}
+
+.title {
+  font-size: 30px;
+}
+
+.btn {
+  background-color: #e26666;
+  color: white;
+}

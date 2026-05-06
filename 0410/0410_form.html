@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表單</title>
+    <!-- <link rel="stylesheet" href="../reset.css" /> -->
+    <link rel="stylesheet" href="0410_form.css" />
+  </head>
+  <body>
+    <section>
+      <form action="http://www.google.com/search" method="get">
+        <div>
+          <!-- input和文字順序調換就可以調換radio按鈕的位置(在字的前或後) -->
+          <!-- name用一樣的名字才能讓這些選項都歸納在同一題裡 -->
+          <label>
+            <input type="radio" name="lunch" id="CHINESE" value="吃中式" />
+            中式1
+          </label>
+          <label>
+            <input type="radio" name="lunch" id="WEST" value="吃西式" />
+            西式1
+          </label>
+          <label>
+            <input type="radio" name="lunch" id="JAPAN" value="吃日式" />
+            日式1
+          </label>
+          <br />
+          <!-- label和input順序調換就可以調換radio按鈕的位置(在字的前或後) -->
+          <!-- 上面的label嵌套和下面的label for相比 兩者都要寫id 上面的可以省寫for="" 下面的在實務上比較實用 -->
+          <label for="chinese">中式2</label>
+          <input type="radio" name="dinner" id="chinese" value="吃中式" />
+          <label for="west">西式2</label>
+          <input type="radio" name="dinner" id="west" value="吃西式" />
+          <label for="japan">日式2</label>
+          <input type="radio" name="dinner" id="japan" value="吃日式" />
+        </div>
+        <!-- 在type="checkbox"後加上checked可以預設已選 -->
+        <div>
+          <p>請選出喜歡的飲料店(複選):</p>
+          <label for="fifty">五十嵐</label>
+          <input
+            type="checkbox"
+            name="drinkshop"
+            id="fifty"
+            value="喜歡五十嵐"
+            checked
+          />
+          <label for="fifty">清心</label>
+          <input
+            type="checkbox"
+            name="drinkshop"
+            id="ChingShin"
+            value="喜歡清心"
+          />
+          <label for="fifty">麻古</label>
+          <input type="checkbox" name="drinkshop" id="MaCu" value="喜歡麻古" />
+          <br />
+          <textarea
+            name="drinkshop"
+            id="opinion"
+            placeholder="為什麼喜歡這幾間?"
+          ></textarea>
+        </div>
+        <!-- 下拉式選單 -->
+        <!-- 在請選擇那邊寫disabled的作用是讓它無法被選擇，寫selected的作用是讓框框預設顯示請選擇這個選項 -->
+        <div>
+          <!--fieldset搭配legend製作框線 -->
+          <fieldset>
+            <legend>請選出最喜歡的水果:</legend>
+            <select name="FRUIT" id="fruit">
+              <option value="" disabled selected>請選擇</option>
+              <optgroup label="紅色水果">
+                <option value="最喜歡草莓">草莓</option>
+              </optgroup>
+              <optgroup label="黃色水果">
+                <option value="最喜歡香蕉">香蕉</option>
+              </optgroup>
+              <optgroup label="綠色水果">
+                <option value="最喜歡哈瓜">哈瓜</option>
+              </optgroup>
+            </select>
+          </fieldset>
+        </div>
+        <div>
+          <!-- autocomplete="off"把搜尋紀錄建議關掉(預設是打開的) -->
+          <input
+            type="text"
+            name="q"
+            placeholder="我是text的搜尋"
+            autocomplete="off"
+          />
+          <input type="search" value="我是search的搜尋" name="" id="" />
+          <input
+            type="hidden"
+            name="鑰匙名或網紅代碼"
+            value="登入的密鑰或網紅的名字"
+          />
+          <!-- readonly唯獨 不存取它的值(例如不可更改的帳號名稱)、required必填 一定會存它的值 兩者者不能一起用 -->
+          <br />
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder="請輸入數字"
+            min="0"
+            max="100"
+            step="5"
+            readonly
+          />
+          <input type="email" name="" id="" placeholder="請輸入email" />
+          <label for="pw">
+            請輸入密碼:
+            <input
+              type="password"
+              name="PASSWORD"
+              id="pw"
+              placeholder="含大小寫"
+              required
+            />
+          </label>
+          <br />
+          <input
+            type="tel"
+            name=""
+            id=""
+            placeholder="請輸入手機號碼"
+            pattern="^09\d{8}$"
+          />
+          <input type="url" name="" id="" placeholder="請輸入地址" />
+          <br />
+          <input type="date" name="" id="" min="2026-04-10" max="2026-04-30" />
+          <input type="datetime-local" name="" id="" />
+          <br />
+          <input type="color" name="" id="" />
+          <br />
+          <input type="file" />
+          <!-- 記得寫value="起始數" -->
+          <input type="range" value="0" id="" />
+          <!-- input type="image"點擊這張圖片也可以有送出表單的效果但實務上不太會做這個 用不到 -->
+          <input type="image" src="images/1.png" name="" id="" />
+          <button>
+            <img src="images/2.jpg" alt="" />
+          </button>
+          <br />
+          <!-- input也可以用button和submit 但要記得寫value="要顯示的字" -->
+          <input type="button" value="我是input的button" name="" id="" />
+          <br />
+          <input type="submit" value="我是input的submit" id="" />
+          <button type="submit">送出表單我是button的submit</button>
+          <br />
+          <input type="reset" value="我是input的重置" name="" id="" />
+          <button type="reset">我是button的重置</button>
+          <button type="button" id="backToTop">
+            點擊捲動到最上方我是button的button
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

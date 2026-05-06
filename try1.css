@@ -1,0 +1,14 @@
+h1 {
+  color: #0a0a60;
+  font-size: 28px;
+}
+h2 {
+  font-size: 20px;
+}
+.hint {
+  color: red;
+}
+.big-font {
+  color: red;
+  font-size: 24px;
+}

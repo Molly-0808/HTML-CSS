@@ -1,0 +1,27 @@
+/* relative相對定位 偏移依據:自己位置 有占空間 */
+/* fixed 偏移依據：螢幕偏移 沒有占空間 */
+/* sticky 偏移依據：自己/螢幕 暫時佔據空間滑走就消失*/
+/* absolute 偏移依據：最近的父層有定位的 沒有占空間*/
+
+header {
+  width: 100%;
+  height: 68px;
+  background-color: #512778;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.miffy-family {
+  width: 100%;
+  aspect-ratio: 4 /1;
+  object-fit: cover;
+}
+
+.sec-title {
+  background-color: #c19ce8;
+  height: 68px;
+  position: sticky;
+  /* position: sticky會自動把前一個推上，去因為黏性元素會被其父容器的邊界「推走」 */
+  top: 68px;
+}
