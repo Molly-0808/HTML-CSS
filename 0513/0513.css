@@ -1,0 +1,29 @@
+/* 記得要先匯入column.css，順序是 reset.css --> column.css --> 0513.css */
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
+  background-color: #c9c8c8;
+}
+
+/* 解決左右兩側多出的空間 */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.item {
+  background-color: #d1fca6;
+}
+
+.card {
+  background-color: #ffbcbc;
+  margin: 0 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

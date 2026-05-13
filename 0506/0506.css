@@ -172,8 +172,8 @@ section {
     "s f f" 10%/ 10% auto 10%;
 }
 
-/* 每一行的最後面：對應的是該列的高度（Row Height）。 */
-/* 斜線 / 之後：定義的是各欄的寬度（Column Widths）。 */
+/* 每一行的最後面：對應的是該列的高度（Row Height）
+斜線 / 之後：定義的是各欄的寬度（Column Widths） */
 
 header {
   background-color: #ffc6bc;

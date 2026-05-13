@@ -1,0 +1,344 @@
+/* 0513 */
+/* 基本設定 (電腦版) */
+header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #bcf586;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  height: 68px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.menu-input {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.burger-icon,
+.sub-menu-icon {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  background-color: #6bb5a0;
+  line-height: 68px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  width: 100%;
+  background-color: #add400;
+  position: absolute;
+  left: 12px;
+  top: 100%;
+}
+
+/* .sub-menu::before {
+  content: "";
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #add400;
+  border-left: 10px solid transparent;
+
+  position: absolute;
+  top: -10px;
+  left: 0px;
+} */
+
+/* 擴增點擊範圍 */
+/* .sub-menu::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+
+.sub-item {
+  padding: 0 20px;
+  /* position: relative; */
+}
+
+/* .sub-item:hover .third-menu{
+  display: block;
+}
+
+.third-menu{
+  display: none;
+  position: absolute;
+  left: 100%;
+  top:10px;
+  width: 100%;
+  background-color: #4C996B;
+} */
+
+.sub-menu-input {
+  display: none;
+}
+
+/* 平板 */
+@media (min-width: 768px) {
+  .nav-item:hover {
+    background-color: #399245;
+    cursor: pointer;
+  }
+
+  .sub-item:hover {
+    background-color: #b1b6ff;
+  }
+
+  .nav-item:hover .sub-menu {
+    display: block;
+  }
+}
+
+/* 手機 */
+@media (max-width: 767px) {
+  header {
+    position: relative;
+    align-items: center;
+  }
+
+  .burger-icon {
+    display: block;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* display: block; */
+  }
+
+  .menu-input:checked + .nav-menu {
+    display: block;
+  }
+
+  .nav-item + .nav-item {
+    border-top: 2px solid #fff;
+  }
+
+  .sub-menu-input:checked + .sub-menu {
+    display: block;
+  }
+
+  .sub-menu {
+    position: static;
+    display: none;
+  }
+
+  .sub-menu-icon {
+    display: inline-block;
+  }
+
+  .menu-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+/* ------------------------------ */
+/* 0508 */
+/* 基本設定 (手機版) */
+.supper-deals {
+  margin: 100px auto;
+}
+
+.deals,
+.products {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.deal-card {
+  height: 200px;
+  background-color: #cddfe1;
+}
+
+.product-card {
+  height: 300px;
+  background-color: #a7acf0;
+}
+
+/* 預設第二張(含)以後的都不要顯示 */
+.deal-card:nth-of-type(n + 2) {
+  display: none;
+}
+
+/* 平版 */
+@media (min-width: 768px) {
+  /* 顯示第二張 */
+  .deal-card:nth-of-type(2) {
+    display: block;
+  }
+
+  .deals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 電腦 */
+@media (min-width: 1024px) {
+  /* 顯示第三張 */
+  .deal-card:nth-of-type(3) {
+    display: block;
+  }
+
+  .deals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ------------------------------ */
+.aa {
+  width: 300px;
+  height: 300px;
+  background-color: #b9f0c3;
+}
+
+/* @media screen and (width < 1024px) {
+  .aa {
+    background-color: #193c19;
+  }
+} */
+
+/* @media screen and (width < 768px) {
+  .aa {
+    background-color: #e1efa2;
+  }
+} */
+
+/* @media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (768px <= width <1024px)  {
+} */
+
+/* 1024px 以上 */
+@media (min-width: 1024px) {
+  .aa {
+    background-color: #e97a7a;
+  }
+}
+
+/* 769px ~ 1023px */
+@media (max-width: 1023px) {
+  .aa {
+    background-color: #626abe;
+  }
+}
+
+/* 768px 以下 */
+@media (max-width: 768px) {
+  .aa {
+    background-color: #e988d2;
+  }
+}
+/* ------------------------------ */
+.box-wrap {
+  width: 80%;
+  max-width: 960px;
+  display: flex;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.box {
+  width: calc(50% - 10px);
+  height: 400px;
+}
+
+.box1 {
+  background-color: rgb(184, 252, 252);
+}
+
+.box2 {
+  background-color: rgb(208, 198, 236);
+}
+/* ------------------------------ */
+.card-wrap {
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 10px;
+  display: flex;
+}
+
+.card {
+  background-color: #f4b283;
+  width: calc(20% - 8px);
+  height: 400px;
+}
+
+.card:nth-of-type(odd) {
+  background-color: #e38989;
+}
+
+.img-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------ */
+/* .box-wrap {
+  background-color: #f9e24a;
+  max-width: 1000px;
+  display: flex;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.box {
+  width: 490px;
+  height: 400px;
+}
+
+.box1 {
+  background-color: rgb(184, 252, 252);
+  float: left;
+  margin-right: 20px;
+}
+
+.box2 {
+  background-color: rgb(208, 198, 236);
+  float: right;
+}
+
+.clear {
+  clear: both;
+} */
