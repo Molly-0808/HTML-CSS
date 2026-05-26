@@ -1,0 +1,37 @@
+/* 第 10 題 */
+
+/* 預設 手機：寬小於 768px */
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  background-color: #aaa;
+  padding: 0 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+  padding: 20px;
+  background-color: #ffa;
+  width: 100%;
+}
+
+.card-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 平板：寬大於或等於 768px */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 電腦：寬大於或等於 1024px */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
